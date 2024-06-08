@@ -1,7 +1,7 @@
 {
-  "name": "demo1",
-  "displayName": "Demo1",
-  "version": "0.0.1",
+  "name": "Link your world",
+  "displayName": "Link your world",
+  "version": "1.0.0",
   "description": "syw",
   "author": "dzdzdhd",
   "scripts": {
@@ -10,9 +10,17 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@plasmohq/messaging": "^0.6.2",
+    "antd": "^5.16.5",
+    "axios": "^1.6.8",
     "plasmo": "0.85.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
@@ -24,8 +32,33 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    
     "host_permissions": [
-      "https://*/*"
-    ]
+      "https://*/*",
+      "http://*/*"
+    ],
+    "permissions": [
+      "tabs",
+      "storage",
+      "history",
+      "scripting",
+      "activeTab",
+      "contextMenus",
+      "notifications"
+    ],
+    "commands": {
+      "test": {
+        "suggested_key": {
+          "default": "Alt+W"
+        },
+        "description": "Open the extension main popup"
+      }
+    },
+    "externally_connectable": {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
   }
 }

@@ -1,24 +1,44 @@
-import { useState } from "react"
+import axios from "axios"
+import { useEffect, useState ,useRef} from "react"
+import { v4 as uuidv4 } from "uuid"
 
-function IndexPopup() {
-  const [data, setData] = useState("")
+import { sendToBackground, sendToContentScript } from "@plasmohq/messaging"
 
+
+
+
+import classes from "./popup.module.css"
+
+import { Button, Input, Space, Switch } from 'antd';
+import type { InputRef } from 'antd';
+import Back from "./components/Back/Back";
+
+
+ function  IndexPopup() {
+  
+
+//   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+
+//     chrome.tabs.sendMessage(tabs[0].id, '随便写点发过去的消息', res => {
+
+// console.log(res);
+//   })
+(async()=>{
+  const csResponse = await sendToContentScript({
+    name: "content",
+    body: 'body'
+  })
+  
+  
+  console.log('desc',csResponse);
+})()
+              
   return (
     <div
-      style={{
-        padding: 16
-      }}>
-      <h2>
-        Welcome to your{" "}
-        <a href="https://www.plasmo.com" target="_blank">
-          Plasmo
-        </a>{" "}
-        Extension!
-      </h2>
-      <input onChange={(e) => setData(e.target.value)} value={data} />
-      <a href="https://docs.plasmo.com" target="_blank">
-        View Docs
-      </a>
+      className={classes.container}
+>
+                <Back />
+    
     </div>
   )
 }

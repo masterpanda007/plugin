@@ -1,0 +1,119 @@
+.Login{
+    margin: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.top{
+
+    height: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis:auto ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    border-bottom: solid 1px #ccc;
+    font-weight: bold;
+    font-size: 12px;
+    /* max-width: 200px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.top span{
+    color: rgb(101, 121, 242);
+    /* max-width: 100px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.top img{
+    width: 15px;
+    height: 15px;
+margin: 2px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+
+
+    /* height: 50px; */
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis:auto ;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+
+
+}
+.switch{
+    display: flex;
+    padding-bottom: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis:auto ;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+.switch div:nth-child(2){
+    flex: 1 ;
+}
+.groups{
+    padding-bottom: 10px;
+
+    font-family:'微软雅黑', "Lucida Console", "Courier New", monospace;
+    /* display: flex;
+    align-items: center; */
+    display: flex;
+    /* grid-template-columns:  repeat(auto-fill, minmax(10rem, 200rem)); */
+    /* grid-template-rows: repeat(auto-fill,25rem); */
+    /* gap: 10rem; */
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    flex-shrink: 3;
+    flex-basis:0 ;
+
+}
+.addto{
+    padding-bottom: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis:0 ;
+
+}
+.labels{
+    background-color: rgb(234, 234, 234);
+    /* background-color: rgb(19, 18, 18); */
+    border-radius: 5px;
+    margin: 5px;
+    padding: 3px 5px;
+    font-weight: lighter;
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+.labels:hover{
+    background-color: rgb(69, 91, 181);
+    /* background-color: rgb(19, 18, 18); */
+    border-radius: 1px;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+
+
+}
+
+.customize_title{
+    display: flex;
+    flex-direction: row;
+}
